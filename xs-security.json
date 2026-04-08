@@ -1,7 +1,7 @@
 {
   "xsappname": "Demo_MTA_Project",
   "tenant-mode": "dedicated",
-  "description": "Security profile of called applications-2",
+  "description": "Security profile of called applications-3",
   "role-templates": [
     {
       "name": "Token_Exchange",
