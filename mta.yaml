@@ -8,9 +8,8 @@ parameters:
   xs-uaa-app-name: shoppr_dev
   app_name: shoppr
 #  deployed_domain: cfapps.eu10.hana.ondemand.com
-#test
-#test4
-#test6
+
+
   ext_redirecturl:
     - 'https://453ee863trial-dev-sample-shop.cfapps.us10-001.hana.ondemand.com/login/callback'
     - 'https://4076c031trial-demo-owkh0m1v-dev-sample-shop.cfapps.us10-001.hana.ondemand.com/login/callback'
