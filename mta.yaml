@@ -7,7 +7,7 @@ parameters:
   dep-space: dev
   xs-uaa-app-name: shoppr_dev
   app_name: shoppr
-#  deployed_domain: cfapps.eu10.hana.ondemand.com
+#  deployed_domain: cfapps.eu10.hana.ondemand.com123
 
 
 
