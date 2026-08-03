@@ -1,0 +1,1606 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "Service for namespace com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001",
+        "description": "This service is located at [https://localhost/service-root/](https://localhost/service-root/)",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://localhost/service-root"
+        }
+    ],
+    "tags": [
+        {
+            "name": "UtilitiesSalesContractProcess"
+        },
+        {
+            "name": "UtilsSlsContrProcessParameter"
+        }
+    ],
+    "paths": {
+        "/UtilitiesSalesContractProcess": {
+            "get": {
+                "summary": "Get entities from UtilitiesSalesContractProcess",
+                "tags": [
+                    "UtilitiesSalesContractProcess"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/top"
+                    },
+                    {
+                        "$ref": "#/components/parameters/skip"
+                    },
+                    {
+                        "name": "$filter",
+                        "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "$ref": "#/components/parameters/count"
+                    },
+                    {
+                        "name": "$orderby",
+                        "description": "Order items by property values, see [Sorting](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionorderby)",
+                        "in": "query",
+                        "explode": false,
+                        "schema": {
+                            "type": "array",
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "UtilsSalesContractProcessUUID",
+                                    "UtilsSalesContractProcessUUID desc",
+                                    "UtilitiesSalesContractProcess",
+                                    "UtilitiesSalesContractProcess desc",
+                                    "UtilsSlsContrProcObjectType",
+                                    "UtilsSlsContrProcObjectType desc",
+                                    "UtilsSlsContractProcessObject",
+                                    "UtilsSlsContractProcessObject desc",
+                                    "UtilsSalesContrLogicalItem",
+                                    "UtilsSalesContrLogicalItem desc",
+                                    "UtilsSlsContractProcessStatus",
+                                    "UtilsSlsContractProcessStatus desc",
+                                    "UtilsSalesContractProcessStep",
+                                    "UtilsSalesContractProcessStep desc",
+                                    "UtilsSlsContrProcNmbrOfExec",
+                                    "UtilsSlsContrProcNmbrOfExec desc",
+                                    "UtilsSlsContrProcStartDateTime",
+                                    "UtilsSlsContrProcStartDateTime desc",
+                                    "UtilsSlsContrProcEndDateTime",
+                                    "UtilsSlsContrProcEndDateTime desc",
+                                    "UtilsSlsContrProcResumeDteTime",
+                                    "UtilsSlsContrProcResumeDteTime desc",
+                                    "UtilsSlsContrProcSuspDateTime",
+                                    "UtilsSlsContrProcSuspDateTime desc",
+                                    "UtilsSlsContractProcessRuntime",
+                                    "UtilsSlsContractProcessRuntime desc",
+                                    "UtilsSlsContrProcIsCancelable",
+                                    "UtilsSlsContrProcIsCancelable desc",
+                                    "UtilsSlsContrProcExecutionMode",
+                                    "UtilsSlsContrProcExecutionMode desc",
+                                    "SAP__Messages/code",
+                                    "SAP__Messages/code desc",
+                                    "SAP__Messages/message",
+                                    "SAP__Messages/message desc",
+                                    "SAP__Messages/target",
+                                    "SAP__Messages/target desc",
+                                    "SAP__Messages/additionalTargets",
+                                    "SAP__Messages/additionalTargets desc",
+                                    "SAP__Messages/transition",
+                                    "SAP__Messages/transition desc",
+                                    "SAP__Messages/numericSeverity",
+                                    "SAP__Messages/numericSeverity desc",
+                                    "SAP__Messages/longtextUrl",
+                                    "SAP__Messages/longtextUrl desc"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "$select",
+                        "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+                        "in": "query",
+                        "explode": false,
+                        "schema": {
+                            "type": "array",
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "UtilsSalesContractProcessUUID",
+                                    "UtilitiesSalesContractProcess",
+                                    "UtilsSlsContrProcObjectType",
+                                    "UtilsSlsContractProcessObject",
+                                    "UtilsSalesContrLogicalItem",
+                                    "UtilsSlsContractProcessStatus",
+                                    "UtilsSalesContractProcessStep",
+                                    "UtilsSlsContrProcNmbrOfExec",
+                                    "UtilsSlsContrProcStartDateTime",
+                                    "UtilsSlsContrProcEndDateTime",
+                                    "UtilsSlsContrProcResumeDteTime",
+                                    "UtilsSlsContrProcSuspDateTime",
+                                    "UtilsSlsContractProcessRuntime",
+                                    "UtilsSlsContrProcIsCancelable",
+                                    "UtilsSlsContrProcExecutionMode",
+                                    "SAP__Messages"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "$expand",
+                        "description": "Expand related entities, see [Expand](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionexpand)",
+                        "in": "query",
+                        "explode": false,
+                        "schema": {
+                            "type": "array",
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "*",
+                                    "_ProcessParameter"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Retrieved entities",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "title": "Collection of UtilitiesSalesContractProcess_Type",
+                                    "properties": {
+                                        "@odata.count": {
+                                            "$ref": "#/components/schemas/count"
+                                        },
+                                        "value": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.UtilitiesSalesContractProcess_Type"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "4XX": {
+                        "$ref": "#/components/responses/error"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Add new entity to UtilitiesSalesContractProcess",
+                "tags": [
+                    "UtilitiesSalesContractProcess"
+                ],
+                "requestBody": {
+                    "description": "New entity",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.UtilitiesSalesContractProcess_Type-create"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created entity",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.UtilitiesSalesContractProcess_Type"
+                                }
+                            }
+                        }
+                    },
+                    "4XX": {
+                        "$ref": "#/components/responses/error"
+                    }
+                }
+            }
+        },
+        "/UtilitiesSalesContractProcess/{UtilsSalesContractProcessUUID}": {
+            "parameters": [
+                {
+                    "description": "key: UtilsSalesContractProcessUUID",
+                    "in": "path",
+                    "name": "UtilsSalesContractProcessUUID",
+                    "required": true,
+                    "schema": {
+                        "type": "string",
+                        "format": "uuid",
+                        "example": "01234567-89ab-cdef-0123-456789abcdef"
+                    }
+                }
+            ],
+            "get": {
+                "summary": "Get entity from UtilitiesSalesContractProcess by key",
+                "tags": [
+                    "UtilitiesSalesContractProcess"
+                ],
+                "parameters": [
+                    {
+                        "name": "$select",
+                        "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+                        "in": "query",
+                        "explode": false,
+                        "schema": {
+                            "type": "array",
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "UtilsSalesContractProcessUUID",
+                                    "UtilitiesSalesContractProcess",
+                                    "UtilsSlsContrProcObjectType",
+                                    "UtilsSlsContractProcessObject",
+                                    "UtilsSalesContrLogicalItem",
+                                    "UtilsSlsContractProcessStatus",
+                                    "UtilsSalesContractProcessStep",
+                                    "UtilsSlsContrProcNmbrOfExec",
+                                    "UtilsSlsContrProcStartDateTime",
+                                    "UtilsSlsContrProcEndDateTime",
+                                    "UtilsSlsContrProcResumeDteTime",
+                                    "UtilsSlsContrProcSuspDateTime",
+                                    "UtilsSlsContractProcessRuntime",
+                                    "UtilsSlsContrProcIsCancelable",
+                                    "UtilsSlsContrProcExecutionMode",
+                                    "SAP__Messages"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "$expand",
+                        "description": "Expand related entities, see [Expand](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionexpand)",
+                        "in": "query",
+                        "explode": false,
+                        "schema": {
+                            "type": "array",
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "*",
+                                    "_ProcessParameter"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Retrieved entity",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.UtilitiesSalesContractProcess_Type"
+                                }
+                            }
+                        }
+                    },
+                    "4XX": {
+                        "$ref": "#/components/responses/error"
+                    }
+                }
+            },
+            "patch": {
+                "summary": "Update entity in UtilitiesSalesContractProcess",
+                "tags": [
+                    "UtilitiesSalesContractProcess"
+                ],
+                "requestBody": {
+                    "description": "New property values",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.UtilitiesSalesContractProcess_Type-update"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "204": {
+                        "description": "Success"
+                    },
+                    "4XX": {
+                        "$ref": "#/components/responses/error"
+                    }
+                }
+            }
+        },
+        "/UtilitiesSalesContractProcess/{UtilsSalesContractProcessUUID}/SAP__self.ResumeProcess": {
+            "post": {
+                "summary": "Invoke action ResumeProcess",
+                "tags": [
+                    "UtilitiesSalesContractProcess"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Success"
+                    },
+                    "4XX": {
+                        "$ref": "#/components/responses/error"
+                    }
+                },
+                "parameters": [
+                    {
+                        "description": "key: UtilsSalesContractProcessUUID",
+                        "in": "path",
+                        "name": "UtilsSalesContractProcessUUID",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid",
+                            "example": "01234567-89ab-cdef-0123-456789abcdef"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Action parameters",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "_ProcessParameter": {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/components/schemas/com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.D_UtilsSlsContrProcParameterP"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/UtilitiesSalesContractProcess/{UtilsSalesContractProcessUUID}/SAP__self.CancelProcess": {
+            "post": {
+                "summary": "Invoke action CancelProcess",
+                "tags": [
+                    "UtilitiesSalesContractProcess"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Success"
+                    },
+                    "4XX": {
+                        "$ref": "#/components/responses/error"
+                    }
+                },
+                "parameters": [
+                    {
+                        "description": "key: UtilsSalesContractProcessUUID",
+                        "in": "path",
+                        "name": "UtilsSalesContractProcessUUID",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid",
+                            "example": "01234567-89ab-cdef-0123-456789abcdef"
+                        }
+                    }
+                ]
+            }
+        },
+        "/UtilitiesSalesContractProcess/{UtilsSalesContractProcessUUID}/SAP__self.GetMessage": {
+            "post": {
+                "summary": "Invoke action GetMessage",
+                "tags": [
+                    "UtilitiesSalesContractProcess"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "title": "Collection of UtilitiesSalesContractProcessGetMessageResult_Type",
+                                    "properties": {
+                                        "@odata.count": {
+                                            "$ref": "#/components/schemas/count"
+                                        },
+                                        "value": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.UtilitiesSalesContractProcessGetMessageResult_Type"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "4XX": {
+                        "$ref": "#/components/responses/error"
+                    }
+                },
+                "parameters": [
+                    {
+                        "description": "key: UtilsSalesContractProcessUUID",
+                        "in": "path",
+                        "name": "UtilsSalesContractProcessUUID",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid",
+                            "example": "01234567-89ab-cdef-0123-456789abcdef"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Action parameters",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "Language": {
+                                        "type": "string",
+                                        "maxLength": 2
+                                    },
+                                    "SystemMessageType": {
+                                        "type": "string",
+                                        "maxLength": 1
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/UtilitiesSalesContractProcess/{UtilsSalesContractProcessUUID}/_ProcessParameter": {
+            "parameters": [
+                {
+                    "description": "key: UtilsSalesContractProcessUUID",
+                    "in": "path",
+                    "name": "UtilsSalesContractProcessUUID",
+                    "required": true,
+                    "schema": {
+                        "type": "string",
+                        "format": "uuid",
+                        "example": "01234567-89ab-cdef-0123-456789abcdef"
+                    }
+                }
+            ],
+            "get": {
+                "summary": "Get entities from related _ProcessParameter",
+                "tags": [
+                    "UtilitiesSalesContractProcess",
+                    "UtilsSlsContrProcessParameter"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/top"
+                    },
+                    {
+                        "$ref": "#/components/parameters/skip"
+                    },
+                    {
+                        "name": "$filter",
+                        "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "$ref": "#/components/parameters/count"
+                    },
+                    {
+                        "name": "$orderby",
+                        "description": "Order items by property values, see [Sorting](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionorderby)",
+                        "in": "query",
+                        "explode": false,
+                        "schema": {
+                            "type": "array",
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "UtilsSalesContractProcessUUID",
+                                    "UtilsSalesContractProcessUUID desc",
+                                    "UtilsSlsContrProcessParameter",
+                                    "UtilsSlsContrProcessParameter desc",
+                                    "UtilsSlsContrProcParamValue",
+                                    "UtilsSlsContrProcParamValue desc",
+                                    "SAP__Messages/code",
+                                    "SAP__Messages/code desc",
+                                    "SAP__Messages/message",
+                                    "SAP__Messages/message desc",
+                                    "SAP__Messages/target",
+                                    "SAP__Messages/target desc",
+                                    "SAP__Messages/additionalTargets",
+                                    "SAP__Messages/additionalTargets desc",
+                                    "SAP__Messages/transition",
+                                    "SAP__Messages/transition desc",
+                                    "SAP__Messages/numericSeverity",
+                                    "SAP__Messages/numericSeverity desc",
+                                    "SAP__Messages/longtextUrl",
+                                    "SAP__Messages/longtextUrl desc"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "$select",
+                        "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+                        "in": "query",
+                        "explode": false,
+                        "schema": {
+                            "type": "array",
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "UtilsSalesContractProcessUUID",
+                                    "UtilsSlsContrProcessParameter",
+                                    "UtilsSlsContrProcParamValue",
+                                    "SAP__Messages"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "$expand",
+                        "description": "Expand related entities, see [Expand](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionexpand)",
+                        "in": "query",
+                        "explode": false,
+                        "schema": {
+                            "type": "array",
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "*",
+                                    "_Process"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Retrieved entities",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "title": "Collection of UtilsSlsContrProcessParameter_Type",
+                                    "properties": {
+                                        "@odata.count": {
+                                            "$ref": "#/components/schemas/count"
+                                        },
+                                        "value": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.UtilsSlsContrProcessParameter_Type"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "4XX": {
+                        "$ref": "#/components/responses/error"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Add new entity to related _ProcessParameter",
+                "tags": [
+                    "UtilitiesSalesContractProcess",
+                    "UtilsSlsContrProcessParameter"
+                ],
+                "requestBody": {
+                    "description": "New entity",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.UtilsSlsContrProcessParameter_Type-create"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created entity",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.UtilsSlsContrProcessParameter_Type"
+                                }
+                            }
+                        }
+                    },
+                    "4XX": {
+                        "$ref": "#/components/responses/error"
+                    }
+                }
+            }
+        },
+        "/UtilsSlsContrProcessParameter": {
+            "get": {
+                "summary": "Get entities from UtilsSlsContrProcessParameter",
+                "tags": [
+                    "UtilsSlsContrProcessParameter"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/top"
+                    },
+                    {
+                        "$ref": "#/components/parameters/skip"
+                    },
+                    {
+                        "name": "$filter",
+                        "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "$ref": "#/components/parameters/count"
+                    },
+                    {
+                        "name": "$orderby",
+                        "description": "Order items by property values, see [Sorting](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionorderby)",
+                        "in": "query",
+                        "explode": false,
+                        "schema": {
+                            "type": "array",
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "UtilsSalesContractProcessUUID",
+                                    "UtilsSalesContractProcessUUID desc",
+                                    "UtilsSlsContrProcessParameter",
+                                    "UtilsSlsContrProcessParameter desc",
+                                    "UtilsSlsContrProcParamValue",
+                                    "UtilsSlsContrProcParamValue desc",
+                                    "SAP__Messages/code",
+                                    "SAP__Messages/code desc",
+                                    "SAP__Messages/message",
+                                    "SAP__Messages/message desc",
+                                    "SAP__Messages/target",
+                                    "SAP__Messages/target desc",
+                                    "SAP__Messages/additionalTargets",
+                                    "SAP__Messages/additionalTargets desc",
+                                    "SAP__Messages/transition",
+                                    "SAP__Messages/transition desc",
+                                    "SAP__Messages/numericSeverity",
+                                    "SAP__Messages/numericSeverity desc",
+                                    "SAP__Messages/longtextUrl",
+                                    "SAP__Messages/longtextUrl desc"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "$select",
+                        "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+                        "in": "query",
+                        "explode": false,
+                        "schema": {
+                            "type": "array",
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "UtilsSalesContractProcessUUID",
+                                    "UtilsSlsContrProcessParameter",
+                                    "UtilsSlsContrProcParamValue",
+                                    "SAP__Messages"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "$expand",
+                        "description": "Expand related entities, see [Expand](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionexpand)",
+                        "in": "query",
+                        "explode": false,
+                        "schema": {
+                            "type": "array",
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "*",
+                                    "_Process"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Retrieved entities",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "title": "Collection of UtilsSlsContrProcessParameter_Type",
+                                    "properties": {
+                                        "@odata.count": {
+                                            "$ref": "#/components/schemas/count"
+                                        },
+                                        "value": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.UtilsSlsContrProcessParameter_Type"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "4XX": {
+                        "$ref": "#/components/responses/error"
+                    }
+                }
+            }
+        },
+        "/UtilsSlsContrProcessParameter/{UtilsSalesContractProcessUUID}/{UtilsSlsContrProcessParameter}": {
+            "parameters": [
+                {
+                    "description": "key: UtilsSalesContractProcessUUID",
+                    "in": "path",
+                    "name": "UtilsSalesContractProcessUUID",
+                    "required": true,
+                    "schema": {
+                        "type": "string",
+                        "format": "uuid",
+                        "example": "01234567-89ab-cdef-0123-456789abcdef"
+                    }
+                },
+                {
+                    "description": "key: UtilsSlsContrProcessParameter",
+                    "in": "path",
+                    "name": "UtilsSlsContrProcessParameter",
+                    "required": true,
+                    "schema": {
+                        "type": "string",
+                        "maxLength": 60
+                    }
+                }
+            ],
+            "get": {
+                "summary": "Get entity from UtilsSlsContrProcessParameter by key",
+                "tags": [
+                    "UtilsSlsContrProcessParameter"
+                ],
+                "parameters": [
+                    {
+                        "name": "$select",
+                        "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+                        "in": "query",
+                        "explode": false,
+                        "schema": {
+                            "type": "array",
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "UtilsSalesContractProcessUUID",
+                                    "UtilsSlsContrProcessParameter",
+                                    "UtilsSlsContrProcParamValue",
+                                    "SAP__Messages"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "$expand",
+                        "description": "Expand related entities, see [Expand](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionexpand)",
+                        "in": "query",
+                        "explode": false,
+                        "schema": {
+                            "type": "array",
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "*",
+                                    "_Process"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Retrieved entity",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.UtilsSlsContrProcessParameter_Type"
+                                }
+                            }
+                        }
+                    },
+                    "4XX": {
+                        "$ref": "#/components/responses/error"
+                    }
+                }
+            },
+            "patch": {
+                "summary": "Update entity in UtilsSlsContrProcessParameter",
+                "tags": [
+                    "UtilsSlsContrProcessParameter"
+                ],
+                "requestBody": {
+                    "description": "New property values",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.UtilsSlsContrProcessParameter_Type-update"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "204": {
+                        "description": "Success"
+                    },
+                    "4XX": {
+                        "$ref": "#/components/responses/error"
+                    }
+                }
+            }
+        },
+        "/UtilsSlsContrProcessParameter/{UtilsSalesContractProcessUUID}/{UtilsSlsContrProcessParameter}/_Process": {
+            "parameters": [
+                {
+                    "description": "key: UtilsSalesContractProcessUUID",
+                    "in": "path",
+                    "name": "UtilsSalesContractProcessUUID",
+                    "required": true,
+                    "schema": {
+                        "type": "string",
+                        "format": "uuid",
+                        "example": "01234567-89ab-cdef-0123-456789abcdef"
+                    }
+                },
+                {
+                    "description": "key: UtilsSlsContrProcessParameter",
+                    "in": "path",
+                    "name": "UtilsSlsContrProcessParameter",
+                    "required": true,
+                    "schema": {
+                        "type": "string",
+                        "maxLength": 60
+                    }
+                }
+            ],
+            "get": {
+                "summary": "Get related _Process",
+                "tags": [
+                    "UtilsSlsContrProcessParameter",
+                    "UtilitiesSalesContractProcess"
+                ],
+                "parameters": [
+                    {
+                        "name": "$select",
+                        "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+                        "in": "query",
+                        "explode": false,
+                        "schema": {
+                            "type": "array",
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "UtilsSalesContractProcessUUID",
+                                    "UtilitiesSalesContractProcess",
+                                    "UtilsSlsContrProcObjectType",
+                                    "UtilsSlsContractProcessObject",
+                                    "UtilsSalesContrLogicalItem",
+                                    "UtilsSlsContractProcessStatus",
+                                    "UtilsSalesContractProcessStep",
+                                    "UtilsSlsContrProcNmbrOfExec",
+                                    "UtilsSlsContrProcStartDateTime",
+                                    "UtilsSlsContrProcEndDateTime",
+                                    "UtilsSlsContrProcResumeDteTime",
+                                    "UtilsSlsContrProcSuspDateTime",
+                                    "UtilsSlsContractProcessRuntime",
+                                    "UtilsSlsContrProcIsCancelable",
+                                    "UtilsSlsContrProcExecutionMode",
+                                    "SAP__Messages"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "$expand",
+                        "description": "Expand related entities, see [Expand](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionexpand)",
+                        "in": "query",
+                        "explode": false,
+                        "schema": {
+                            "type": "array",
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "*",
+                                    "_ProcessParameter"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Retrieved entity",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.UtilitiesSalesContractProcess_Type"
+                                }
+                            }
+                        }
+                    },
+                    "4XX": {
+                        "$ref": "#/components/responses/error"
+                    }
+                }
+            }
+        },
+        "/$batch": {
+            "post": {
+                "summary": "Send a group of requests",
+                "description": "Group multiple requests into a single request payload, see [Batch Requests](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_BatchRequests).\n\n*Please note that \"Try it out\" is not supported for this request.*",
+                "tags": [
+                    "Batch Requests"
+                ],
+                "requestBody": {
+                    "required": true,
+                    "description": "Batch request",
+                    "content": {
+                        "multipart/mixed;boundary=request-separator": {
+                            "schema": {
+                                "type": "string"
+                            },
+                            "example": "--request-separator\nContent-Type: application/http\nContent-Transfer-Encoding: binary\n\nGET UtilitiesSalesContractProcess HTTP/1.1\nAccept: application/json\n\n\n--request-separator--"
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Batch response",
+                        "content": {
+                            "multipart/mixed": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "--response-separator\nContent-Type: application/http\n\nHTTP/1.1 200 OK\nContent-Type: application/json\n\n{...}\n--response-separator--"
+                            }
+                        }
+                    },
+                    "4XX": {
+                        "$ref": "#/components/responses/error"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.D_UtilsSlsContrProcParameterP": {
+                "title": "D_UtilsSlsContrProcParameterP",
+                "type": "object",
+                "properties": {
+                    "UtilsSlsContrProcessParameter": {
+                        "type": "string",
+                        "maxLength": 60
+                    },
+                    "UtilsSlsContrProcParamValue": {
+                        "type": "string",
+                        "maxLength": 200
+                    }
+                }
+            },
+            "com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.SAP__Message": {
+                "title": "SAP__Message",
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    },
+                    "target": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "additionalTargets": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "transition": {
+                        "type": "boolean"
+                    },
+                    "numericSeverity": {
+                        "type": "integer",
+                        "format": "uint8"
+                    },
+                    "longtextUrl": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                }
+            },
+            "com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.SAP__Message-create": {
+                "title": "SAP__Message (for create)",
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    },
+                    "target": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "additionalTargets": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "transition": {
+                        "type": "boolean"
+                    },
+                    "numericSeverity": {
+                        "type": "integer",
+                        "format": "uint8"
+                    },
+                    "longtextUrl": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                }
+            },
+            "com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.SAP__Message-update": {
+                "title": "SAP__Message (for update)",
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    },
+                    "target": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "additionalTargets": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "transition": {
+                        "type": "boolean"
+                    },
+                    "numericSeverity": {
+                        "type": "integer",
+                        "format": "uint8"
+                    },
+                    "longtextUrl": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                }
+            },
+            "com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.UtilitiesSalesContractProcessGetMessageResult_Type": {
+                "title": "UtilitiesSalesContractProcessGetMessageResult_Type",
+                "type": "object",
+                "properties": {
+                    "ApplicationLogHandle": {
+                        "type": "string",
+                        "format": "uuid",
+                        "example": "01234567-89ab-cdef-0123-456789abcdef",
+                        "nullable": true
+                    },
+                    "SystemMessageCreationDateTime": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2017-04-13T15:51:04Z",
+                        "nullable": true
+                    },
+                    "SystemMessageClass": {
+                        "type": "string",
+                        "maxLength": 20
+                    },
+                    "SystemMessageNumber": {
+                        "type": "string",
+                        "maxLength": 3
+                    },
+                    "SystemMessageType": {
+                        "type": "string",
+                        "maxLength": 1
+                    },
+                    "SystemMessageText": {
+                        "type": "string"
+                    },
+                    "Language": {
+                        "type": "string",
+                        "maxLength": 2
+                    }
+                }
+            },
+            "com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.UtilitiesSalesContractProcess_Type": {
+                "title": "UtilitiesSalesContractProcess_Type",
+                "type": "object",
+                "properties": {
+                    "UtilsSalesContractProcessUUID": {
+                        "type": "string",
+                        "format": "uuid",
+                        "example": "01234567-89ab-cdef-0123-456789abcdef"
+                    },
+                    "UtilitiesSalesContractProcess": {
+                        "type": "string",
+                        "maxLength": 30
+                    },
+                    "UtilsSlsContrProcObjectType": {
+                        "type": "string",
+                        "maxLength": 10
+                    },
+                    "UtilsSlsContractProcessObject": {
+                        "type": "string",
+                        "maxLength": 120
+                    },
+                    "UtilsSalesContrLogicalItem": {
+                        "type": "string",
+                        "maxLength": 16
+                    },
+                    "UtilsSlsContractProcessStatus": {
+                        "type": "string",
+                        "maxLength": 10
+                    },
+                    "UtilsSalesContractProcessStep": {
+                        "type": "string",
+                        "maxLength": 22
+                    },
+                    "UtilsSlsContrProcNmbrOfExec": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "UtilsSlsContrProcStartDateTime": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2017-04-13T15:51:04.0000000Z",
+                        "nullable": true
+                    },
+                    "UtilsSlsContrProcEndDateTime": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2017-04-13T15:51:04.0000000Z",
+                        "nullable": true
+                    },
+                    "UtilsSlsContrProcResumeDteTime": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2017-04-13T15:51:04.0000000Z",
+                        "nullable": true
+                    },
+                    "UtilsSlsContrProcSuspDateTime": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2017-04-13T15:51:04.0000000Z",
+                        "nullable": true
+                    },
+                    "UtilsSlsContractProcessRuntime": {
+                        "anyOf": [
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ],
+                        "format": "decimal",
+                        "example": 0,
+                        "multipleOf": 1e-7
+                    },
+                    "UtilsSlsContrProcIsCancelable": {
+                        "type": "boolean"
+                    },
+                    "UtilsSlsContrProcExecutionMode": {
+                        "type": "string",
+                        "maxLength": 1
+                    },
+                    "SAP__Messages": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.SAP__Message"
+                        }
+                    },
+                    "_ProcessParameter": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.UtilsSlsContrProcessParameter_Type"
+                        }
+                    },
+                    "_ProcessParameter@odata.count": {
+                        "$ref": "#/components/schemas/count"
+                    }
+                }
+            },
+            "com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.UtilitiesSalesContractProcess_Type-create": {
+                "title": "UtilitiesSalesContractProcess_Type (for create)",
+                "type": "object",
+                "properties": {
+                    "UtilitiesSalesContractProcess": {
+                        "type": "string",
+                        "maxLength": 30
+                    },
+                    "UtilsSlsContrProcObjectType": {
+                        "type": "string",
+                        "maxLength": 10
+                    },
+                    "UtilsSlsContractProcessObject": {
+                        "type": "string",
+                        "maxLength": 120
+                    },
+                    "UtilsSalesContrLogicalItem": {
+                        "type": "string",
+                        "maxLength": 16
+                    },
+                    "UtilsSlsContractProcessStatus": {
+                        "type": "string",
+                        "maxLength": 10
+                    },
+                    "UtilsSalesContractProcessStep": {
+                        "type": "string",
+                        "maxLength": 22
+                    },
+                    "UtilsSlsContrProcNmbrOfExec": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "UtilsSlsContrProcStartDateTime": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2017-04-13T15:51:04.0000000Z",
+                        "nullable": true
+                    },
+                    "UtilsSlsContrProcEndDateTime": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2017-04-13T15:51:04.0000000Z",
+                        "nullable": true
+                    },
+                    "UtilsSlsContrProcResumeDteTime": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2017-04-13T15:51:04.0000000Z",
+                        "nullable": true
+                    },
+                    "UtilsSlsContrProcSuspDateTime": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2017-04-13T15:51:04.0000000Z",
+                        "nullable": true
+                    },
+                    "UtilsSlsContractProcessRuntime": {
+                        "anyOf": [
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ],
+                        "format": "decimal",
+                        "example": 0,
+                        "multipleOf": 1e-7
+                    },
+                    "UtilsSlsContrProcIsCancelable": {
+                        "type": "boolean"
+                    },
+                    "UtilsSlsContrProcExecutionMode": {
+                        "type": "string",
+                        "maxLength": 1
+                    },
+                    "SAP__Messages": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.SAP__Message-create"
+                        }
+                    }
+                }
+            },
+            "com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.UtilitiesSalesContractProcess_Type-update": {
+                "title": "UtilitiesSalesContractProcess_Type (for update)",
+                "type": "object",
+                "properties": {
+                    "UtilsSlsContrProcObjectType": {
+                        "type": "string",
+                        "maxLength": 10
+                    },
+                    "UtilsSlsContractProcessObject": {
+                        "type": "string",
+                        "maxLength": 120
+                    },
+                    "UtilsSalesContrLogicalItem": {
+                        "type": "string",
+                        "maxLength": 16
+                    },
+                    "UtilsSlsContractProcessStatus": {
+                        "type": "string",
+                        "maxLength": 10
+                    },
+                    "UtilsSalesContractProcessStep": {
+                        "type": "string",
+                        "maxLength": 22
+                    },
+                    "UtilsSlsContrProcNmbrOfExec": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "UtilsSlsContrProcStartDateTime": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2017-04-13T15:51:04.0000000Z",
+                        "nullable": true
+                    },
+                    "UtilsSlsContrProcEndDateTime": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2017-04-13T15:51:04.0000000Z",
+                        "nullable": true
+                    },
+                    "UtilsSlsContrProcResumeDteTime": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2017-04-13T15:51:04.0000000Z",
+                        "nullable": true
+                    },
+                    "UtilsSlsContrProcSuspDateTime": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2017-04-13T15:51:04.0000000Z",
+                        "nullable": true
+                    },
+                    "UtilsSlsContractProcessRuntime": {
+                        "anyOf": [
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ],
+                        "format": "decimal",
+                        "example": 0,
+                        "multipleOf": 1e-7
+                    },
+                    "UtilsSlsContrProcIsCancelable": {
+                        "type": "boolean"
+                    },
+                    "UtilsSlsContrProcExecutionMode": {
+                        "type": "string",
+                        "maxLength": 1
+                    },
+                    "SAP__Messages": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.SAP__Message-update"
+                        }
+                    }
+                }
+            },
+            "com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.UtilsSlsContrProcessParameter_Type": {
+                "title": "UtilsSlsContrProcessParameter_Type",
+                "type": "object",
+                "properties": {
+                    "UtilsSalesContractProcessUUID": {
+                        "type": "string",
+                        "format": "uuid",
+                        "example": "01234567-89ab-cdef-0123-456789abcdef"
+                    },
+                    "UtilsSlsContrProcessParameter": {
+                        "type": "string",
+                        "maxLength": 60
+                    },
+                    "UtilsSlsContrProcParamValue": {
+                        "type": "string",
+                        "maxLength": 200
+                    },
+                    "SAP__Messages": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.SAP__Message"
+                        }
+                    },
+                    "_Process": {
+                        "$ref": "#/components/schemas/com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.UtilitiesSalesContractProcess_Type"
+                    }
+                }
+            },
+            "com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.UtilsSlsContrProcessParameter_Type-create": {
+                "title": "UtilsSlsContrProcessParameter_Type (for create)",
+                "type": "object",
+                "properties": {
+                    "UtilsSlsContrProcessParameter": {
+                        "type": "string",
+                        "maxLength": 60
+                    },
+                    "UtilsSlsContrProcParamValue": {
+                        "type": "string",
+                        "maxLength": 200
+                    },
+                    "SAP__Messages": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.SAP__Message-create"
+                        }
+                    }
+                },
+                "required": [
+                    "UtilsSlsContrProcessParameter"
+                ]
+            },
+            "com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.UtilsSlsContrProcessParameter_Type-update": {
+                "title": "UtilsSlsContrProcessParameter_Type (for update)",
+                "type": "object",
+                "properties": {
+                    "UtilsSlsContrProcParamValue": {
+                        "type": "string",
+                        "maxLength": 200
+                    },
+                    "SAP__Messages": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/com.sap.gateway.srvd_a2x.api_utilssalescontractprocess.v0001.SAP__Message-update"
+                        }
+                    }
+                }
+            },
+            "count": {
+                "anyOf": [
+                    {
+                        "type": "integer",
+                        "minimum": 0
+                    },
+                    {
+                        "type": "string"
+                    }
+                ],
+                "description": "The number of entities in the collection. Available when using the [$count](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptioncount) query option."
+            },
+            "error": {
+                "type": "object",
+                "required": [
+                    "error"
+                ],
+                "properties": {
+                    "error": {
+                        "type": "object",
+                        "required": [
+                            "code",
+                            "message"
+                        ],
+                        "properties": {
+                            "code": {
+                                "type": "string"
+                            },
+                            "message": {
+                                "type": "string"
+                            },
+                            "target": {
+                                "type": "string"
+                            },
+                            "details": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "required": [
+                                        "code",
+                                        "message"
+                                    ],
+                                    "properties": {
+                                        "code": {
+                                            "type": "string"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        },
+                                        "target": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "innererror": {
+                                "type": "object",
+                                "description": "The structure of this object is service-specific"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "parameters": {
+            "top": {
+                "name": "$top",
+                "in": "query",
+                "description": "Show only the first n items, see [Paging - Top](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptiontop)",
+                "schema": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "example": 50
+            },
+            "skip": {
+                "name": "$skip",
+                "in": "query",
+                "description": "Skip the first n items, see [Paging - Skip](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionskip)",
+                "schema": {
+                    "type": "integer",
+                    "minimum": 0
+                }
+            },
+            "count": {
+                "name": "$count",
+                "in": "query",
+                "description": "Include count of items, see [Count](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptioncount)",
+                "schema": {
+                    "type": "boolean"
+                }
+            },
+            "search": {
+                "name": "$search",
+                "in": "query",
+                "description": "Search items by search phrases, see [Searching](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionsearch)",
+                "schema": {
+                    "type": "string"
+                }
+            }
+        },
+        "responses": {
+            "error": {
+                "description": "Error",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/error"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

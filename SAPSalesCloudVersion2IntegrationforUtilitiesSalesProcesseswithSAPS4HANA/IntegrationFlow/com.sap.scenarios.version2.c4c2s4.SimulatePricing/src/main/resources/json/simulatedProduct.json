@@ -1,0 +1,839 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Utilities Sales Product Simulation",
+    "version": "1.0.0",
+    "description": "This API simulates single Utilities Sales Products."
+  },
+  "servers": [
+    {
+      "url": "https://{hostname}",
+      "description": "Example of server url is https://my1234567.crm.cloud.sap",
+      "variables": {
+        "hostname": {
+          "default": ""
+        }
+      }
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "basicAuthentication": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    },
+    "schemas": {
+      "error": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "details": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "target": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "message": {
+                "type": "string"
+              },
+              "target": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "UtilitiesSalesProductSimulationqueryresponse": {
+        "title": "Utilities Sales Product Simulation query response",
+        "type": "object",
+        "properties": {
+          "count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "utilitiesProduct": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 40
+                },
+                "utilitiesProductSalesScenario": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 30
+                },
+                "pricingHasError": {
+                  "type": "boolean",
+                  "nullable": true
+                },
+                "productDescription": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 40
+                },
+                "productType": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 4
+                },
+                "productGroup": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 9
+                },
+                "division": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 2
+                },
+                "industrySector": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 1
+                },
+                "validityStartDate": {
+                  "type": "string",
+                  "format": "date",
+                  "nullable": true
+                },
+                "validityEndDate": {
+                  "type": "string",
+                  "format": "date",
+                  "nullable": true
+                },
+                "divisionName": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 20
+                },
+                "utilitiesRateCategory": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 10
+                },
+                "utilsProdCreationMethod": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 2
+                },
+                "utilitiesRateCategoryName": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 40
+                },
+                "materialTypeName": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 25
+                },
+                "industrySectorName": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 25
+                },
+                "productGroupName": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 20
+                },
+                "utilitiesDivisionCategory": {
+                  "type": "string",
+                  "nullable": true,
+                  "maxLength": 2
+                },
+                "runtimeCharcVal": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "characteristic": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 30
+                      },
+                      "charcInternalId": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 10
+                      },
+                      "charcValuePositionNumber": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 4
+                      },
+                      "charcValue": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 70
+                      },
+                      "charcFromNumericValueUnit": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 3
+                      },
+                      "charcFromDecimalValue": {
+                        "type": "number",
+                        "nullable": true,
+                        "format": "double"
+                      },
+                      "charcToDecimalValue": {
+                        "type": "number",
+                        "nullable": true,
+                        "format": "double"
+                      },
+                      "charcFromDate": {
+                        "type": "string",
+                        "format": "date",
+                        "nullable": true
+                      },
+                      "charcFromTime": {
+                        "type": "string",
+                        "format": "time",
+                        "nullable": true
+                      },
+                      "charcFromAmount": {
+                        "type": "number",
+                        "nullable": true,
+                        "format": "double"
+                      },
+                      "charcToAmount": {
+                        "type": "number",
+                        "nullable": true,
+                        "format": "double"
+                      },
+                      "currency": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 3
+                      },
+                      "charcValueAsCharacterValue": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 70
+                      },
+                      "charcBaseUnit": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 3
+                      },
+                      "charcValidityStartDate": {
+                        "type": "string",
+                        "format": "date",
+                        "nullable": true
+                      },
+                      "charcValidityEndDate": {
+                        "type": "string",
+                        "format": "date",
+                        "nullable": true
+                      },
+                      "charcDataType": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 4
+                      },
+                      "charcFromNumericValue": {
+                        "type": "number",
+                        "nullable": true,
+                        "format": "double"
+                      },
+                      "charcToNumericValue": {
+                        "type": "number",
+                        "nullable": true,
+                        "format": "double"
+                      },
+                      "charcToNumericValueUnit": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 3
+                      },
+                      "varConfignValueAssignmentType": {
+                        "type": "integer",
+                        "nullable": true,
+                        "format": "int32"
+                      }
+                    }
+                  }
+                },
+                "simulationItem": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "utilsBillingSimulationRunItem": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 30
+                      },
+                      "utilsBillgSimlnRunItemCode": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 30
+                      },
+                      "utilsBillgSimlnRunItmAmount": {
+                        "type": "number",
+                        "nullable": true,
+                        "format": "double"
+                      },
+                      "utilsBillgDocTransactionCrcy": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 3
+                      },
+                      "utilsBillgSimlnRunItmQuantity": {
+                        "type": "number",
+                        "nullable": true,
+                        "format": "double"
+                      },
+                      "utilsBillgSimlnRunItmQtyUnit": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 3
+                      },
+                      "utilsBillgSimlnRunItmUntAmount": {
+                        "type": "number",
+                        "nullable": true,
+                        "format": "double"
+                      },
+                      "utilsBillgSimlnRunItmUntQty": {
+                        "type": "number",
+                        "nullable": true,
+                        "format": "double"
+                      },
+                      "utilsBillgSimlnRunItmSequence": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 2
+                      },
+                      "utilsBillgSimlnRunItmIsTotal": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 1
+                      },
+                      "utilsBillgSimlnRunItmIsDspRlvt": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 1
+                      },
+                      "utilsBillgSimlnRunItmCndnType": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 4
+                      },
+                      "utilsBillgSimlnRunItmDesc": {
+                        "type": "string",
+                        "nullable": true,
+                        "maxLength": 60
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "UtilitiesSalesProductSimulationcreaterequest": {
+        "title": "Utilities Sales Product Simulation create request",
+        "type": "object",
+        "properties": {
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "product": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "utilitiesProductSalesScenario": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 30
+              },
+              "language": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 2
+              },
+              "runtimeCharcVal": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "characteristic": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 30
+                    },
+                    "charcValue": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 70
+                    },
+                    "charcFromNumericValueUnit": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 3
+                    },
+                    "charcFromDecimalValue": {
+                      "type": "number",
+                      "nullable": true,
+                      "format": "double"
+                    },
+                    "charcFromDate": {
+                      "type": "string",
+                      "format": "date",
+                      "nullable": true
+                    },
+                    "charcFromTime": {
+                      "type": "string",
+                      "format": "time",
+                      "nullable": true
+                    },
+                    "charcFromAmount": {
+                      "type": "number",
+                      "nullable": true,
+                      "format": "double"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 3
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "UtilitiesSalesProductSimulationfile": {
+        "title": "Utilities Sales Product Simulation file",
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "properties": {
+              "utilitiesProduct": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 40
+              },
+              "utilitiesProductSalesScenario": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 30
+              },
+              "pricingHasError": {
+                "type": "boolean",
+                "nullable": true
+              },
+              "productDescription": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 40
+              },
+              "productType": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 4
+              },
+              "productGroup": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 9
+              },
+              "division": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 2
+              },
+              "industrySector": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 1
+              },
+              "validityStartDate": {
+                "type": "string",
+                "format": "date",
+                "nullable": true
+              },
+              "validityEndDate": {
+                "type": "string",
+                "format": "date",
+                "nullable": true
+              },
+              "divisionName": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 20
+              },
+              "utilitiesRateCategory": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 10
+              },
+              "utilsProdCreationMethod": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 2
+              },
+              "utilitiesRateCategoryName": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 40
+              },
+              "materialTypeName": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 25
+              },
+              "industrySectorName": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 25
+              },
+              "productGroupName": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 20
+              },
+              "utilitiesDivisionCategory": {
+                "type": "string",
+                "nullable": true,
+                "maxLength": 2
+              },
+              "runtimeCharcVal": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "characteristic": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 30
+                    },
+                    "charcInternalId": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 10
+                    },
+                    "charcValuePositionNumber": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 4
+                    },
+                    "charcValue": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 70
+                    },
+                    "charcFromNumericValueUnit": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 3
+                    },
+                    "charcFromDecimalValue": {
+                      "type": "number",
+                      "nullable": true,
+                      "format": "double"
+                    },
+                    "charcToDecimalValue": {
+                      "type": "number",
+                      "nullable": true,
+                      "format": "double"
+                    },
+                    "charcFromDate": {
+                      "type": "string",
+                      "format": "date",
+                      "nullable": true
+                    },
+                    "charcFromTime": {
+                      "type": "string",
+                      "format": "time",
+                      "nullable": true
+                    },
+                    "charcFromAmount": {
+                      "type": "number",
+                      "nullable": true,
+                      "format": "double"
+                    },
+                    "charcToAmount": {
+                      "type": "number",
+                      "nullable": true,
+                      "format": "double"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 3
+                    },
+                    "charcValueAsCharacterValue": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 70
+                    },
+                    "charcBaseUnit": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 3
+                    },
+                    "charcValidityStartDate": {
+                      "type": "string",
+                      "format": "date",
+                      "nullable": true
+                    },
+                    "charcValidityEndDate": {
+                      "type": "string",
+                      "format": "date",
+                      "nullable": true
+                    },
+                    "charcDataType": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 4
+                    },
+                    "charcFromNumericValue": {
+                      "type": "number",
+                      "nullable": true,
+                      "format": "double"
+                    },
+                    "charcToNumericValue": {
+                      "type": "number",
+                      "nullable": true,
+                      "format": "double"
+                    },
+                    "charcToNumericValueUnit": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 3
+                    },
+                    "varConfignValueAssignmentType": {
+                      "type": "integer",
+                      "nullable": true,
+                      "format": "int32"
+                    }
+                  }
+                }
+              },
+              "simulationItem": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "utilsBillingSimulationRunItem": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 30
+                    },
+                    "utilsBillgSimlnRunItemCode": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 30
+                    },
+                    "utilsBillgSimlnRunItmAmount": {
+                      "type": "number",
+                      "nullable": true,
+                      "format": "double"
+                    },
+                    "utilsBillgDocTransactionCrcy": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 3
+                    },
+                    "utilsBillgSimlnRunItmQuantity": {
+                      "type": "number",
+                      "nullable": true,
+                      "format": "double"
+                    },
+                    "utilsBillgSimlnRunItmQtyUnit": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 3
+                    },
+                    "utilsBillgSimlnRunItmUntAmount": {
+                      "type": "number",
+                      "nullable": true,
+                      "format": "double"
+                    },
+                    "utilsBillgSimlnRunItmUntQty": {
+                      "type": "number",
+                      "nullable": true,
+                      "format": "double"
+                    },
+                    "utilsBillgSimlnRunItmSequence": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 2
+                    },
+                    "utilsBillgSimlnRunItmIsTotal": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 1
+                    },
+                    "utilsBillgSimlnRunItmIsDspRlvt": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 1
+                    },
+                    "utilsBillgSimlnRunItmCndnType": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 4
+                    },
+                    "utilsBillgSimlnRunItmDesc": {
+                      "type": "string",
+                      "nullable": true,
+                      "maxLength": 60
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "basicAuthentication": []
+    }
+  ],
+  "paths": {
+    "/sap/c4c/api/v1utilities-sales-order-service/simulatedProduct": {
+      "get": {
+        "operationId": "queryutilitiessalesorderservice_simulatedProduct",
+        "tags": [
+          "SimulatedProduct"
+        ],
+        "summary": "Read data",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "200 OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UtilitiesSalesProductSimulationqueryresponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 BAD_REQUEST",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "401 UNAUTHORIZED"
+          },
+          "403": {
+            "description": "403 FORBIDDEN"
+          },
+          "404": {
+            "description": "404 NOT_FOUND"
+          },
+          "500": {
+            "description": "500 INTERNAL_SERVER_ERROR",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "createutilitiessalesorderservice_simulatedProduct",
+        "tags": [
+          "SimulatedProduct"
+        ],
+        "summary": "Create data",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UtilitiesSalesProductSimulationcreaterequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "201 CREATED",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UtilitiesSalesProductSimulationfile"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 BAD_REQUEST",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "401 UNAUTHORIZED"
+          },
+          "403": {
+            "description": "403 FORBIDDEN"
+          },
+          "404": {
+            "description": "404 NOT_FOUND"
+          },
+          "500": {
+            "description": "500 INTERNAL_SERVER_ERROR",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "x-sap-shortText": "Manage entities from Utilities Sales Product Simulation service."
+}
