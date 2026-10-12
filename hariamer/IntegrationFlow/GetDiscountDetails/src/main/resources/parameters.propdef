@@ -1,2 +1,29 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><parameters><param_references/></parameters>
-Added initial iFlow configuration for testing.
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><parameters><parameter>
+    <key/>
+    <name>test value</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description>testing configh</description>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>te</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata>
+      <Configured>true</Configured>
+    </additionalMetadata>
+  </parameter><parameter>
+    <key/>
+    <name>kft</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata>
+      <Configured>true</Configured>
+    </additionalMetadata>
+  </parameter><param_references/></parameters>
