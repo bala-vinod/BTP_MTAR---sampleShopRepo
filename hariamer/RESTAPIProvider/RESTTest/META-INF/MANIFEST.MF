@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: RESTTest
 Bundle-SymbolicName: RESTTest; singleton:=true
-Bundle-Version: 1.0.9
+Bundle-Version: 1.0.1
 SAP-BundleType: RESTAPIProvider
 SAP-NodeType: IFLMAP
 SAP-RuntimeProfile: iflmap
@@ -35,5 +35,5 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.sap
 Origin-Bundle-Name: RESTTest
 Origin-Bundle-SymbolicName: RESTTest
 Origin-Bundle-Version: 1.0.1
-Origin-ModifiedDate: 1733994795575
+Origin-ModifiedDate: 1792412056806
 

@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: SOAPAPITest
 Bundle-SymbolicName: SOAPAPITest; singleton:=true
-Bundle-Version: 1.0.7
+Bundle-Version: 1.0.0
 SAP-BundleType: SOAPAPIProvider
 SAP-NodeType: IFLMAP
 SAP-RuntimeProfile: iflmap
@@ -35,5 +35,5 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.sap
 Origin-Bundle-Name: SOAPAPITest
 Origin-Bundle-SymbolicName: SOAPAPITest
 Origin-Bundle-Version: 1.0.0
-Origin-ModifiedDate: 1733994818210
+Origin-ModifiedDate: 1792412056812
 
