@@ -1,0 +1,3 @@
+#Store metainfo properties
+#Tue Nov 17 08:33:10 UTC 2026
+description=Receives web shop sales order JSON over HTTPS, maps it and posts to the order receiver
