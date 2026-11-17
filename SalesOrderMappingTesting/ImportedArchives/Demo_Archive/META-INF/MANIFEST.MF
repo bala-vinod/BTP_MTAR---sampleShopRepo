@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Demo Archive
+Bundle-SymbolicName: Demo_Archive
+Bundle-Version: 1.0.3
+SAP-BundleType: ImportedArchives
+SAP-NodeType: IFLMAP
+Import-Package: 
+Provide-Capability: importedarchives.Demo_Archive;version:Version="1.0.3
+ "
+Origin-Bundle-Name: Demo Archive
+Origin-Bundle-SymbolicName: Demo_Archive
+Origin-Bundle-Version: 1.0.2
+Origin-ModifiedDate: 1793176584762
+

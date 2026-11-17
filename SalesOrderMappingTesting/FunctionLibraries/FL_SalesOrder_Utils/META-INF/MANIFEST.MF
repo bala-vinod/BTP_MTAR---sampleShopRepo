@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: FL_SalesOrder_Utils
+Bundle-SymbolicName: FL_SalesOrder_Utils
+Bundle-Version: 1.0.5
+SAP-BundleType: FunctionLibraries
+SAP-NodeType: IFLMAP
+Import-Package: 
+Bundle-Activator: com.sap.xi.mapping.camel.FunctionLibraryBundleActivato
+ r
+Provide-Capability: functionlibraries.FL_SalesOrder_Utils;version:Versio
+ n="1.0.5"
+Origin-Bundle-Name: FL_SalesOrder_Utils
+Origin-Bundle-SymbolicName: FL_SalesOrder_Utils
+Require-Capability: importedarchives.Demo_Archive;resolution:=optional;b
+ undleType:String="ImportedArchives";source:String="reference"
+Origin-Bundle-Version: 1.0.3
+Origin-ModifiedDate: 1793176484998
+
