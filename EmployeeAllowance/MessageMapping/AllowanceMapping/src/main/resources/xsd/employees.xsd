@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Employees">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Employee" minOccurs="1" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="empId"      type="xs:string"/>
+              <xs:element name="name"       type="xs:string"/>
+              <xs:element name="grade"      type="xs:string"/>
+              <xs:element name="baseSalary" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
