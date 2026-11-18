@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: AllowanceMapping
 Bundle-SymbolicName: AllowanceMapping
-Bundle-Version: 1.0.7
+Bundle-Version: 1.0.8
 SAP-BundleType: MessageMapping
 SAP-NodeType: IFLMAP
 Import-Package: com.sap.esb.security,javax.jms,javax.jws,javax.wsdl,java

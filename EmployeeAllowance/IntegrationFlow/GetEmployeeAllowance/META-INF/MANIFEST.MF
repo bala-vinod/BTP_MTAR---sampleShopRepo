@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: GetEmployeeAllowance
 Bundle-SymbolicName: GetEmployeeAllowance; singleton:=true
-Bundle-Version: 1.0.8
+Bundle-Version: 1.0.10
 SAP-BundleType: IntegrationFlow
 SAP-NodeType: IFLMAP
 SAP-RuntimeProfile: iflmap

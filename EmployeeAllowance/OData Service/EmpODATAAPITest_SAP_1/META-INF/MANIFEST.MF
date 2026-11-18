@@ -8,7 +8,7 @@ SAP-RuntimeProfile: iflmap
 SAP-NodeType: IFLMAP
 Bundle-Name: EmpODATAAPITest
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Bundle-Version: 1.0.3
+Bundle-Version: 1.0.4
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: EmpODATAAPITest_SAP_1
 ServiceMpc: com.sap.gateway.core.ip.provider.model.CamelModelProvider
