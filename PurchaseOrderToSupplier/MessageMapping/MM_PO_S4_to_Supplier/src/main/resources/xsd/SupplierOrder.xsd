@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Target structure: Purchase Order in the supplier's format -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns="http://supplier.example.com/orders"
+            targetNamespace="http://supplier.example.com/orders"
+            elementFormDefault="unqualified">
+  <xsd:element name="SupplierOrder">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="OrderID" type="xsd:string"/>           <!-- from PONumber -->
+        <xsd:element name="OrderDate" type="xsd:string"/>         <!-- from PODate, dd.MM.yyyy -->
+        <xsd:element name="VendorNo" type="xsd:string"/>          <!-- from VendorID -->
+        <xsd:element name="DeliveryLocation" type="xsd:string"/>  <!-- from Plant via VM_PlantCodes -->
+        <xsd:element name="ItemCode" type="xsd:string"/>          <!-- from Material -->
+        <xsd:element name="OrderQty" type="xsd:decimal"/>         <!-- from Quantity -->
+        <xsd:element name="UoM" type="xsd:string" minOccurs="0"/> <!-- from Unit -->
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
